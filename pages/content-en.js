@@ -67,7 +67,7 @@ export default function contenten() {
             <div className="row">
               <div id="wb-sttl" className="col-md-8">
                 <a href="../index-en.html">
-                  <Image src="../theme-wet-boew/assets/logo.svg" alt="" />
+                  {/* <Image src="../theme-wet-boew/assets/logo.svg" alt="" /> */}
                   <span>
                     Web Experience Toolkit<span className="wb-inv">, </span>
                     <small>
