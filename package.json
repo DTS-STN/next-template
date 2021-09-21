@@ -34,10 +34,8 @@
     "husky": "^7.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.1.0",
-    "postcss": "^8.3.6",
     "prettier": "^2.3.2",
     "react-test-renderer": "^17.0.2",
-    "start-server-and-test": "^1.14.0",
-    "tailwindcss": "^2.2.9"
+    "start-server-and-test": "^1.14.0"
   }
 }
