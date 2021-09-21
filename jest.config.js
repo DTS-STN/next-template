@@ -1,5 +1,5 @@
 module.exports = {
-  modulePathIgnorePatterns: ['./cypress'],
+  modulePathIgnorePatterns: ['./cypress', 'wet-boew-dist-4.0-dist'],
   collectCoverageFrom: [
     '**/*.{js,jsx,ts,tsx}',
     '!**/*.d.ts',
