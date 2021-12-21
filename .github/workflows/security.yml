@@ -26,6 +26,7 @@ jobs:
 
       # Here is where you build your code
       - run: |
+          npm i
           npm run build
 
       - name: Perform CodeQL Analysis
