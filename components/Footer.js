@@ -134,9 +134,4 @@ Footer.propTypes = {
    * current locale in the address
    */
   locale: PropTypes.string,
-
-  //  /**
-  //   * Translated text
-  //   */
-  //  t: PropTypes.object,
 }
