@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1643394178968" clover="3.2.0">
-  <project timestamp="1643394178969" name="All files">
-    <metrics statements="33" coveredstatements="17" conditionals="41" coveredconditionals="29" methods="16" coveredmethods="8" elements="90" coveredelements="54" complexity="0" loc="33" ncloc="33" packages="3" files="9" classes="9"/>
+<coverage generated="1643639464582" clover="3.2.0">
+  <project timestamp="1643639464582" name="All files">
+    <metrics statements="38" coveredstatements="18" conditionals="44" coveredconditionals="29" methods="18" coveredmethods="8" elements="100" coveredelements="55" complexity="0" loc="38" ncloc="38" packages="3" files="10" classes="10"/>
     <package name="components">
-      <metrics statements="18" coveredstatements="13" conditionals="31" coveredconditionals="25" methods="7" coveredmethods="5"/>
+      <metrics statements="14" coveredstatements="10" conditionals="28" coveredconditionals="24" methods="6" coveredmethods="4"/>
       <file name="Footer.js" path="/home/runner/work/next-template/next-template/components/Footer.js">
-        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="29" count="3" type="stmt"/>
-        <line num="55" count="5" type="stmt"/>
-        <line num="90" count="1" type="stmt"/>
+        <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="3"/>
+        <line num="11" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
+        <line num="59" count="5" type="stmt"/>
+        <line num="94" count="1" type="stmt"/>
       </file>
       <file name="Header.js" path="/home/runner/work/next-template/next-template/components/Header.js">
-        <metrics statements="11" coveredstatements="9" conditionals="27" coveredconditionals="23" methods="3" coveredmethods="2"/>
+        <metrics statements="6" coveredstatements="5" conditionals="22" coveredconditionals="21" methods="2" coveredmethods="1"/>
         <line num="10" count="3" type="cond" truecount="1" falsecount="1"/>
         <line num="11" count="3" type="stmt"/>
-        <line num="13" count="3" type="stmt"/>
-        <line num="15" count="3" type="stmt"/>
-        <line num="16" count="3" type="stmt"/>
-        <line num="18" count="3" type="cond" truecount="2" falsecount="3"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="23" count="3" type="stmt"/>
-        <line num="26" count="3" type="stmt"/>
-        <line num="132" count="0" type="stmt"/>
-        <line num="137" count="1" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="120" count="0" type="stmt"/>
+        <line num="125" count="1" type="stmt"/>
       </file>
       <file name="Layout.js" path="/home/runner/work/next-template/next-template/components/Layout.js">
         <metrics statements="3" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -33,16 +29,18 @@
       </file>
     </package>
     <package name="pages">
-      <metrics statements="11" coveredstatements="4" conditionals="10" coveredconditionals="4" methods="7" coveredmethods="3"/>
+      <metrics statements="20" coveredstatements="8" conditionals="16" coveredconditionals="5" methods="10" coveredmethods="4"/>
       <file name="404.js" path="/home/runner/work/next-template/next-template/pages/404.js">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="63" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
       </file>
       <file name="_app.js" path="/home/runner/work/next-template/next-template/pages/_app.js">
-        <metrics statements="2" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="4" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
       </file>
       <file name="_error.js" path="/home/runner/work/next-template/next-template/pages/_error.js">
         <metrics statements="4" coveredstatements="2" conditionals="8" coveredconditionals="4" methods="2" coveredmethods="1"/>
@@ -51,11 +49,21 @@
         <line num="66" count="0" type="cond" truecount="0" falsecount="4"/>
         <line num="67" count="0" type="stmt"/>
       </file>
+      <file name="home.js" path="/home/runner/work/next-template/next-template/pages/home.js">
+        <metrics statements="6" coveredstatements="3" conditionals="4" coveredconditionals="1" methods="2" coveredmethods="1"/>
+        <line num="8" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+      </file>
       <file name="index.js" path="/home/runner/work/next-template/next-template/pages/index.js">
-        <metrics statements="3" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
+        <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="86" count="1" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="92" count="0" type="stmt"/>
       </file>
     </package>
     <package name="pages.api">
