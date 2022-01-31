@@ -28,6 +28,7 @@ export default function Layout(props) {
       </main>
 
       <Footer
+        locale={props.locale}
         footerLogoAltText="symbol2"
         footerLogoImage="/wmms-blk.svg"
         footerNav1="aboutGovernment"

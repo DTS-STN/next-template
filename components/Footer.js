@@ -129,4 +129,14 @@ Footer.propTypes = {
    * image path for footer logo
    */
   footerLogoImage: PropTypes.string.isRequired,
+
+  /**
+   * current locale in the address
+   */
+  locale: PropTypes.string,
+
+  //  /**
+  //   * Translated text
+  //   */
+  //  t: PropTypes.object,
 }
