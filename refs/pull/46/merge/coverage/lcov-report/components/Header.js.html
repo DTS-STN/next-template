@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
+                <span class="strong">83.33% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>8/10</span>
+                <span class='fraction'>5/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">85.18% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>23/27</span>
+                <span class='fraction'>22/22</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.66% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/3</span>
+                <span class='fraction'>1/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
+                <span class="strong">83.33% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>8/10</span>
+                <span class='fraction'>5/6</span>
             </div>
         
             
@@ -223,17 +223,7 @@
 <a name='L158'></a><a href='#L158'>158</a>
 <a name='L159'></a><a href='#L159'>159</a>
 <a name='L160'></a><a href='#L160'>160</a>
-<a name='L161'></a><a href='#L161'>161</a>
-<a name='L162'></a><a href='#L162'>162</a>
-<a name='L163'></a><a href='#L163'>163</a>
-<a name='L164'></a><a href='#L164'>164</a>
-<a name='L165'></a><a href='#L165'>165</a>
-<a name='L166'></a><a href='#L166'>166</a>
-<a name='L167'></a><a href='#L167'>167</a>
-<a name='L168'></a><a href='#L168'>168</a>
-<a name='L169'></a><a href='#L169'>169</a>
-<a name='L170'></a><a href='#L170'>170</a>
-<a name='L171'></a><a href='#L171'>171</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L161'></a><a href='#L161'>161</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -244,17 +234,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -412,19 +392,9 @@ import en from '../locales/en'
 import fr from '../locales/fr'
 &nbsp;
 export default function Header(props) {
-  const t = props.locale === 'en' ? <span class="branch-0 cbranch-no" title="branch not covered" >en </span>: fr
+  const t = props.locale === 'en' ? en : fr
   const router = useRouter()
-&nbsp;
-  const [langToggleLink, setLangToggleLink] = React.useState()
-  React.useEffect(() =&gt; {
-    let updatedLangToggleLink
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (props.toggleLangLink &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >router?.route </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >router.locale)</span> {
-<span class="cstat-no" title="statement not covered" >      updatedLangToggleLink = {</span>
-        pathname: props.toggleLangLink,
-      }
-    }
-    setLangToggleLink(updatedLangToggleLink)
-  }, [router?.route, router.locale, props.toggleLangLink])
+  const currentRouteQueryParams = router.query
 &nbsp;
   return (
     &lt;&gt;
@@ -465,11 +435,11 @@ export default function Header(props) {
             {/* Language selector for small screens */}
             &lt;Link
               key={props.language}
-              href={langToggleLink || '/'}
+              href={props.langToggleLink || '/'}
               locale={props.language === 'en' ? 'fr' : 'en'}
             &gt;
               &lt;a
-                className="block md:hidden md:text-sm ml-6 pb-2 sm:ml-16 underline font-body font-bold text-canada-footer-font  text-base hover:text-canada-footer-hover-font-blue"
+                className="block md:hidden md:text-sm ml-6 pb-2 sm:ml-16 underline font-body font-bold text-[#284162]  text-base hover:text-[#0535d2]"
                 // onClick={() =&gt; setLanguage(language)}
                 lang={props.language === 'en' ? 'fr' : 'en'}
               &gt;
@@ -482,7 +452,7 @@ export default function Header(props) {
             {/* Language selector for mid to larger screens */}
             &lt;Link
               key={props.language}
-              href={langToggleLink || '/'}
+              href={props.langToggleLink || '/'}
               locale={props.language === 'en' ? 'fr' : 'en'}
             &gt;
               &lt;a
@@ -542,9 +512,9 @@ Header.propTypes = {
   title: propTypes.string,
 &nbsp;
   /**
-   * current locale in the address
+   * 'current' language used to display language links
    */
-  locale: propTypes.string,
+  language: propTypes.string,
 &nbsp;
   /**
    * Translated text
@@ -580,7 +550,7 @@ Header.propTypes = {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener">istanbul</a>
-                at Fri Jan 28 2022 19:14:58 GMT+0000 (Coordinated Universal Time)
+                at Tue Feb 01 2022 16:38:12 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../prettify.js"></script>
