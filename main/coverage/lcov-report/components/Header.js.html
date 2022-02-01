@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">83.33% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>5/6</span>
+                <span class='fraction'>4/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">95.45% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>21/22</span>
+                <span class='fraction'>20/20</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">83.33% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>5/6</span>
+                <span class='fraction'>4/5</span>
             </div>
         
             
@@ -219,20 +219,12 @@
 <a name='L154'></a><a href='#L154'>154</a>
 <a name='L155'></a><a href='#L155'>155</a>
 <a name='L156'></a><a href='#L156'>156</a>
-<a name='L157'></a><a href='#L157'>157</a>
-<a name='L158'></a><a href='#L158'>158</a>
-<a name='L159'></a><a href='#L159'>159</a>
-<a name='L160'></a><a href='#L160'>160</a>
-<a name='L161'></a><a href='#L161'>161</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L157'></a><a href='#L157'>157</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -388,11 +380,7 @@ import propTypes from 'prop-types'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 &nbsp;
-import en from '../locales/en'
-import fr from '../locales/fr'
-&nbsp;
 export default function Header(props) {
-  const t = props.locale === 'en' ? <span class="branch-0 cbranch-no" title="branch not covered" >en </span>: fr
   const router = useRouter()
   const currentRouteQueryParams = router.query
 &nbsp;
@@ -400,23 +388,23 @@ export default function Header(props) {
     &lt;&gt;
       &lt;nav
         role="navigation"
-        aria-label={t.skipToMainContent}
-        className="skip-main"
+        aria-label={props.t.skipToMainContent}
+        className="absolute w-px h-px -left-96 focus-within:w-screen focus-within:h-auto focus-within:top-4 focus-within:z-50 focus-within:flex focus-within:justify-center"
       &gt;
         &lt;a
           id="skipToMainContent"
-          className="bg-custom-blue-dark text-white px-2 focus:outline-black-solid hover:bg-gray-dark"
-          href="#wb-cont"
+          className="bg-blue-800 text-white px-2 focus:outline-black-solid hover:bg-gray-dark"
+          href="#homeContent"
           draggable="false"
         &gt;
-          {t.skipToMainContent}
+          {props.t.skipToMainContent}
         &lt;/a&gt;
       &lt;/nav&gt;
 &nbsp;
       &lt;header&gt;
-        &lt;div className="container mx-auto px-6 flex-col flex md:flex md:flex-row justify-between"&gt;
+        &lt;div className="container mx-auto px-6 flex-col flex md:flex md:flex-row justify-between pt-6"&gt;
           &lt;div className="flex flex-row justify-between items-center lg:mt-7"&gt;
-            &lt;a href={t.gocLink}&gt;
+            &lt;a href={props.t.gocLink}&gt;
               &lt;img
                 className="h-5 w-auto xs:h-6 sm:h-8 md:h-8 lg:h-7 xl:h-8 "
                 src={
@@ -474,19 +462,19 @@ export default function Header(props) {
         &lt;div className="mb-2 border-t pb-2 mt-4"&gt;&lt;/div&gt;
 &nbsp;
         {/* &lt;Menu
-          loginText={t.login}
+          loginText={props.t.login}
           items={[
             {
               link: '/search',
-              text: t.serviceAndBenefits,
+              text: props.t.serviceAndBenefits,
             },
             {
               link: '/',
-              text: t.tools,
+              text: props.t.tools,
             },
             {
               link: '/',
-              text: t.contactUs,
+              text: props.t.contactUs,
             },
           ]}
         /&gt; */}
@@ -550,7 +538,7 @@ Header.propTypes = {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener">istanbul</a>
-                at Mon Jan 31 2022 14:31:04 GMT+0000 (Coordinated Universal Time)
+                at Tue Feb 01 2022 16:41:01 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../prettify.js"></script>
