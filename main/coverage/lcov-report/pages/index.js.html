@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">40% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/4</span>
+                <span class='fraction'>2/5</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">40% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/4</span>
+                <span class='fraction'>2/5</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -158,16 +158,23 @@
 <a name='L93'></a><a href='#L93'>93</a>
 <a name='L94'></a><a href='#L94'>94</a>
 <a name='L95'></a><a href='#L95'>95</a>
-<a name='L96'></a><a href='#L96'>96</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -245,6 +252,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -255,16 +279,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import Image from 'next/image'
 import Link from 'next/link'
-import Head from 'next/head'
-export default function Index() {
+import MetaData from '../components/MetaData'
+export default function Index(props) {
   return (
     &lt;div role="main" className="container mx-auto px-6 my-5 bg-slate-300 p-12"&gt;
-      &lt;Head&gt;
-        &lt;title&gt;Next Template - Canada.ca&lt;/title&gt;
-        &lt;meta charSet="utf-8" /&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
-        &lt;link rel="icon" href="/favicon.ico" /&gt;
-      &lt;/Head&gt;
+      &lt;MetaData language={props.locale} data={props.meta}&gt;&lt;/MetaData&gt;
       &lt;div className="flex flex-col justify-center items-center m-auto"&gt;
         &lt;div className="z-10 bg-white h-auto w-[18.75rem] xl:w-[31.25rem]"&gt;
           &lt;h1 className="sr-only"&gt;service.canada.ca-digital-center&lt;/h1&gt;
@@ -344,8 +363,25 @@ Index.getLayout = function <span class="fstat-no" title="function not covered" >
 &nbsp;
 export async function <span class="fstat-no" title="function not covered" >getStaticProps(</span>{ locale }) {
   // const content = await fetchContent()
+&nbsp;
+  /* Place-holder Meta Data Props */
+  const meta = <span class="cstat-no" title="statement not covered" >{</span>
+    data_en: {
+      title: 'Next Template - Canada.ca',
+      desc: 'English',
+      author: 'Service Canada',
+      keywords: '',
+    },
+    data_fr: {
+      title: 'Next Template - Canada.ca',
+      desc: 'Français',
+      author: 'Service Canada',
+      keywords: '',
+    },
+  }
+&nbsp;
 <span class="cstat-no" title="statement not covered" >  return {</span>
-    props: { locale },
+    props: { locale, meta },
   }
 }
 &nbsp;</pre></td></tr></table></pre>
@@ -355,7 +391,7 @@ export async function <span class="fstat-no" title="function not covered" >getSt
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener">istanbul</a>
-                at Wed Feb 02 2022 13:54:48 GMT+0000 (Coordinated Universal Time)
+                at Wed Feb 02 2022 16:50:54 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../prettify.js"></script>

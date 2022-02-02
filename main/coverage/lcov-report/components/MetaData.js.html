@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for pages/_app.js</title>
+    <title>Code coverage report for components/MetaData.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">pages</a> _app.js</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">components</a> MetaData.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>2/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>1/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>2/3</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -93,6 +93,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -100,47 +113,34 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import '../styles/globals.css'
-import '../styles/fonts.css'
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
+import Head from 'next/head'
 &nbsp;
-import en from '../locales/en'
-import fr from '../locales/fr'
+export default function MetaData(props) {
+  const d = props.language === 'en' ? props.data.data_en : <span class="branch-1 cbranch-no" title="branch not covered" >props.data.data_fr</span>
 &nbsp;
-import Layout from '../components/Layout'
-&nbsp;
-function <span class="fstat-no" title="function not covered" >MyApp(</span>{ Component, pageProps }) {
-  const t = <span class="cstat-no" title="statement not covered" >pageProps.locale === 'en' ? en : fr</span>
-&nbsp;
-<span class="cstat-no" title="statement not covered" >  if (Component.getLayout) {</span>
-<span class="cstat-no" title="statement not covered" >    return Component.getLayout(&lt;Component {...pageProps} /&gt;)</span>
-  }
-<span class="cstat-no" title="statement not covered" >  return (</span>
-    &lt;Layout
-      locale={pageProps.locale}
-      meta={pageProps.meta}
-      langToggleLink={pageProps.langToggleLink}
-    &gt;
-      &lt;Component {...pageProps} /&gt;
-    &lt;/Layout&gt;
+  return (
+    &lt;&gt;
+      &lt;Head&gt;
+        &lt;title&gt;{d.title}&lt;/title&gt;
+        &lt;meta charSet="utf-8" /&gt;
+        &lt;meta name="description" content={d.desc} /&gt;
+        &lt;meta name="author" content={d.author} /&gt;
+        &lt;meta name="keywords" content={d.keywords} /&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+        &lt;link rel="icon" href="/favicon.ico" /&gt;
+      &lt;/Head&gt;
+    &lt;/&gt;
   )
 }
 &nbsp;
-export default MyApp
+export async function <span class="fstat-no" title="function not covered" >getStaticProps(</span>{ locale }) {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    props: { locale },
+  }
+}
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
