@@ -3,6 +3,7 @@ import en from '../locales/en'
 import fr from '../locales/fr'
 
 import { fetchContent } from '../lib/cms'
+import { Button } from '@dts-stn/decd-design-system'
 
 export default function Home(props) {
   /* istanbul ignore next */
@@ -14,6 +15,14 @@ export default function Home(props) {
     >
       <h1>{props.content.header}</h1>
       <p>{props.content.paragraph}</p>
+      <Button
+        iconAltText="supertask"
+        id="supertask"
+        onClick={() => {
+          console.log('clicked')
+        }}
+        text="Supertask button"
+      />
     </div>
   )
 }
