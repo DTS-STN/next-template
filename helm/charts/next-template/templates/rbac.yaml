@@ -1,8 +1,10 @@
+{{- if .Values.rbac.enabled -}}
+{{- $fullName := include "fullname" . -}}
 kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: {{ .Values.namespaceowner.name }}
-  namespace: {{ .Values.namespaceowner.namespace }}
+  name: {{ $fullName }}
+  namespace: {{ .Release.Namespace }}
 rules:
 - apiGroups: [""]
   resources: ["*"]
@@ -11,13 +13,14 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: {{ .Values.namespaceowner.name }}
-  namespace: {{ .Values.namespaceowner.namespace }}
+  name: {{ $fullName }}
+  namespace: {{ .Release.Namespace }}
 subjects:
 - apiGroup: rbac.authorization.k8s.io
   kind: Group
-  name: {{ .Values.namespaceowner.apigroupnameguid }}
+  name: {{ .Values.rbac.azureAdGroupId }}
 roleRef:
   kind: Role
-  name: {{ .Values.namespaceowner.name }}
+  name: {{ $fullName }}
   apiGroup: ""
+{{- end }}
