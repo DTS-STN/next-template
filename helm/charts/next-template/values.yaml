@@ -10,6 +10,10 @@ image:
 deployment:
   annotations: {}
 
+rbac:
+  azureAdGroupId: ""
+  enabled: false
+
 healthChecks:
   livenessDelay: 60
   readinessDelay: 60
@@ -26,7 +30,7 @@ service:
   port: 80
 
 ingress:
-  enabled: true
+  enabled: false
   annotations:
     {}
     # kubernetes.io/ingress.class: nginx
