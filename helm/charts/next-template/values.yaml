@@ -10,6 +10,10 @@ image:
 deployment:
   annotations: {}
 
+rbac:
+  azureAdGroupId: ""
+  enabled: false
+
 healthChecks:
   livenessDelay: 60
   readinessDelay: 60
