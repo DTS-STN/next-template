@@ -89,3 +89,10 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Licence
+
+Unless otherwise noted, the source code of this project is covered under [Crown Copyright, Government of Canada](https://www.canada.ca/en/canadian-heritage/services/crown-copyright-request.html), and is distributed under the [MIT Licence](../LICENSE).
+
+The Canada wordmark and related graphics associated with this distribution are protected under trademark law and copyright law.
+No permission is granted to use them outside the parameters of the Government of Canada's corporate identity program.
