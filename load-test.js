@@ -26,7 +26,7 @@ export default function main() {
           'sec-ch-ua-mobile': '?0',
           'sec-ch-ua-platform': '"Linux"',
         },
-      }
+      },
     )
     response = http.get('https://next-template-perf.bdm-dev.dts-stn.com/', {
       headers: {
@@ -46,7 +46,7 @@ export default function main() {
           'sec-ch-ua-mobile': '?0',
           'sec-ch-ua-platform': '"Linux"',
         },
-      }
+      },
     )
     response = http.get(
       'https://fonts.gstatic.com/s/lato/v22/S6uyw4BMUTPHjx4wXg.woff2',
@@ -58,7 +58,7 @@ export default function main() {
           'sec-ch-ua-mobile': '?0',
           'sec-ch-ua-platform': '"Linux"',
         },
-      }
+      },
     )
     response = http.get(
       'https://fonts.gstatic.com/s/notosans/v25/o-0IIpQlx3QUlC5A4PNr5TRA.woff2',
@@ -70,7 +70,7 @@ export default function main() {
           'sec-ch-ua-mobile': '?0',
           'sec-ch-ua-platform': '"Linux"',
         },
-      }
+      },
     )
   })
 

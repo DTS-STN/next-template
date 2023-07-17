@@ -11,6 +11,7 @@ describe('app page loads', () => {
   })
 
   it('App has no detectable a11y violations on load', () => {
+    cy.wait(1000);
     cy.checkA11y()
   })
 })

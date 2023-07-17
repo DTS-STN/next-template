@@ -43,14 +43,10 @@ export default function Header(props) {
               key={props.language}
               href={props.langToggleLink || '/'}
               locale={props.language === 'en' ? 'fr' : 'en'}
+              className="block md:hidden md:text-sm ml-6 pb-2 sm:ml-16 underline font-body font-bold text-[#284162] text-base hover:text-[#0535d2]"
+              lang={props.language === 'en' ? 'fr' : 'en'}
             >
-              <a
-                className="block md:hidden md:text-sm ml-6 pb-2 sm:ml-16 underline font-body font-bold text-[#284162]  text-base hover:text-[#0535d2]"
-                // onClick={() => setLanguage(language)}
-                lang={props.language === 'en' ? 'fr' : 'en'}
-              >
-                {props.language === 'en' ? 'FR' : 'EN'}
-              </a>
+              {props.language === 'en' ? 'FR' : 'EN'}
             </Link>
           </div>
 
@@ -60,15 +56,11 @@ export default function Header(props) {
               key={props.language}
               href={props.langToggleLink || '/'}
               locale={props.language === 'en' ? 'fr' : 'en'}
+              className="md:block hidden pb-0 lg:pb-4 self-end underline font-body text-[#284162] hover:text-[#0535d2] "
+              data-cy="toggle-language-link"
+              lang={props.language === 'en' ? 'fr' : 'en'}
             >
-              <a
-                className="md:block hidden pb-0 lg:pb-4 self-end underline font-body text-[#284162] hover:text-[#0535d2] "
-                data-cy="toggle-language-link"
-                // onClick={() => setLanguage(language)}
-                lang={props.language === 'en' ? 'fr' : 'en'}
-              >
-                {props.language === 'en' ? 'Français' : 'English'}
-              </a>
+              {props.language === 'en' ? 'Français' : 'English'}
             </Link>
 
             {/* Placeholder for SearchBar in case is back in ver 4??? */}
