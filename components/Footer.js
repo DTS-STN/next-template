@@ -102,7 +102,7 @@ Footer.propTypes = {
     PropTypes.shape({
       footerBoxlink: PropTypes.string.isRequired,
       footerBoxLinkText: PropTypes.string.isRequired,
-    })
+    }),
   ),
   /**
    * array of objects containing the link text and link
@@ -111,7 +111,7 @@ Footer.propTypes = {
     PropTypes.shape({
       link: PropTypes.string.isRequired,
       linkText: PropTypes.string.isRequired,
-    })
+    }),
   ),
 
   /**

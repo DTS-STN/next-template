@@ -41,7 +41,7 @@ describe('Footer', () => {
             linkText: 'some-link-4',
           },
         ]}
-      />
+      />,
     )
     const footerLink = screen.getByText('some-link-4')
     expect(footerLink).toBeInTheDocument()
@@ -67,7 +67,7 @@ describe('Footer', () => {
         ]}
         footerNav1="aboutGovernment"
         footerNav2="aboutThisSite"
-      />
+      />,
     )
     const results = await axe(container)
     expect(results).toHaveNoViolations()

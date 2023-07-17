@@ -10,15 +10,6 @@ jest.mock('next/router', () => ({
   useRouter: jest.fn(),
 }))
 
-// the code below is to avoid the following error:
-//    "An update to Link inside a test was not wrapped in act(...)"
-jest.mock('next/link', () => ({
-  __esModule: true,
-  default: ({ children, href }) => (
-    <children.type {...children.props} href={href} />
-  ),
-}))
-
 expect.extend(toHaveNoViolations)
 
 describe('Layout with default text', () => {

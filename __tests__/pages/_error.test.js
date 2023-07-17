@@ -9,7 +9,7 @@ describe('custom error', () => {
   it('renders custom statusCode without crashing', () => {
     render(<CustomError statusCode="500" />)
     expect(
-      screen.getByText('An error 500 occurred on server')
+      screen.getByText('An error 500 occurred on server'),
     ).toBeInTheDocument()
   })
 
