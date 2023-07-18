@@ -1,8 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 import { axe, toHaveNoViolations } from 'jest-axe'
-
-import Layout from '../../components/Layout'
+import Layout from '../../src/components/Layout'
 import { useRouter } from 'next/router'
 
 // mocks useRouter to be able to use component' router.asPath

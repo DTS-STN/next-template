@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
-import en from '../locales/en'
-import fr from '../locales/fr'
+import en from '../../public/locales/en'
+import fr from '../../public/locales/fr'
 import logger from '../lib/logger'
 import { useEffect } from 'react'
 

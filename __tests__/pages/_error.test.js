@@ -3,7 +3,7 @@
  */
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import CustomError from '../../pages/_error'
+import CustomError from '../../src/pages/_error'
 
 describe('custom error', () => {
   it('renders custom statusCode without crashing', () => {

@@ -22,7 +22,6 @@ export default function Footer(props) {
               {props.footerNav1}
             </h3>
             <ul className="flex flex-col text-sm sm:grid sm:grid-cols-2 xl:grid xl:grid-cols-3 sm:gap-1">
-              {' '}
               {props.footerBoxLinks.map((value, index) => {
                 return (
                   <li
