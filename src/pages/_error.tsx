@@ -1,6 +1,12 @@
 import Link from 'next/link'
+import React from 'react'
+import { NextPage, NextPageContext } from 'next'
 
-function CustomError({ statusCode }) {
+interface ErrorProps {
+  statusCode?: number
+}
+
+const CustomError: NextPage<ErrorProps> = ({ statusCode }) => {
   return (
     <div className="grid md:grid-cols-2 sm:grid-cols-1 items-center justify-center overflow-visible md:h-96 sm:h-screen mx-2 my-2 px-20">
       <div className="error-404">
@@ -62,32 +68,9 @@ function CustomError({ statusCode }) {
   )
 }
 
-/* istanbul ignore next */
-export async function getServerSideProps({ res, err }) {
+CustomError.getInitialProps = ({ res, err }: NextPageContext) => {
   const statusCode = res ? res.statusCode : err ? err.statusCode : 404
-
-  /* Place-holder Meta Data Props */
-  const meta = {
-    data_en: {
-      title: `Next Template - ${statusCode}.`,
-      desc: 'English',
-      author: 'Service Canada',
-      keywords: '',
-    },
-    data_fr: {
-      title: `Next Template - ${statusCode}.`,
-      desc: 'Français',
-      author: 'Service Canada',
-      keywords: '',
-    },
-  }
-
-  return {
-    props: {
-      statusCode,
-      meta,
-    },
-  }
+  return { statusCode }
 }
 
 export default CustomError

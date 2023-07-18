@@ -1,7 +1,20 @@
 import React from 'react'
-import propTypes from 'prop-types'
 import Link from 'next/link'
-export default function Header(props) {
+
+interface HeaderProps {
+  t: {
+    skipToMainContent: string
+    gocLink: string
+    login: string
+    serviceAndBenefits: string
+    tools: string
+    contactUs: string
+  }
+  language: string
+  langToggleLink?: string
+}
+
+const Header: React.FC<HeaderProps> = (props) => {
   return (
     <>
       <nav
@@ -13,7 +26,7 @@ export default function Header(props) {
           id="skipToMainContent"
           className="bg-blue-800 text-white px-2 focus:outline-black-solid hover:bg-gray-dark"
           href="#homeContent"
-          draggable="false"
+          draggable={false}
         >
           {props.t.skipToMainContent}
         </a>
@@ -24,7 +37,7 @@ export default function Header(props) {
           <div className="flex flex-row justify-between items-center lg:mt-7">
             <a href={props.t.gocLink}>
               <img
-                className="h-5 w-auto xs:h-6 sm:h-8 md:h-8 lg:h-7 xl:h-8 "
+                className="h-5 w-auto xs:h-6 sm:h-8 md:h-8 lg:h-7 xl:h-8"
                 src={
                   props.language === 'en'
                     ? '/assets/sig-blk-en.svg'
@@ -100,46 +113,4 @@ export default function Header(props) {
   )
 }
 
-/* istanbul ignore next */
-export async function getStaticProps({ locale }) {
-  return {
-    props: { locale },
-  }
-}
-
-Header.propTypes = {
-  // Title of the page
-  title: propTypes.string,
-
-  /**
-   * 'current' language used to display language links
-   */
-  language: propTypes.string,
-
-  /**
-   * Translated text
-   */
-  t: propTypes.object,
-
-  /**
-   * Link to change locals
-   */
-  langToggleLink: propTypes.string,
-
-  /**
-   * Array of Items for the breadcrumb
-   */
-  // breadcrumbItems: propTypes.arrayOf(
-  //   propTypes.shape({
-  //     /**
-  //      * Text for the breadcrumb
-  //      */
-  //     text: propTypes.string,
-
-  //     /**
-  //      * Link for the breadcrumb
-  //      */
-  //     link: propTypes.string,
-  //   })
-  // ),
-}
+export default Header

@@ -1,13 +1,23 @@
 import '../styles/globals.css'
 import Layout from '../components/Layout'
+import { AppProps } from 'next/app'
+import React, { ComponentType, ReactElement, ReactNode } from 'react'
+import { NextPage } from 'next'
 
-function MyApp({ Component, pageProps }) {
-  /* istanbul ignore next */
+type Page<P = {}> = NextPage<P> & {
+  getLayout?: (page: ReactElement) => ReactNode
+  layout?: ComponentType
+}
+
+type Props = AppProps & {
+  Component: Page
+}
+
+function MyApp({ Component, pageProps }: Props) {
   if (Component.getLayout) {
     return Component.getLayout(<Component {...pageProps} />)
   }
 
-  /* istanbul ignore next */
   return (
     <Layout
       locale={pageProps.locale}

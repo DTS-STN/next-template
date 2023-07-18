@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+import React, { ReactNode } from 'react'
 import Header from './Header'
 import Footer from './Footer'
 import MetaData from './MetaData'
@@ -6,18 +6,39 @@ import MetaData from './MetaData'
 import en from '../../public/locales/en'
 import fr from '../../public/locales/fr'
 
-export default function Layout(props) {
+interface LayoutProps {
+  children: ReactNode
+  locale?: string
+  meta: {
+    data_en: {
+      title: string
+      desc: string
+      author: string
+      keywords: string
+    }
+    data_fr: {
+      title: string
+      desc: string
+      author: string
+      keywords: string
+    }
+  }
+  title?: string
+  langToggleLink?: string
+}
+
+const Layout: React.FC<LayoutProps> = (props) => {
   const t = props.locale === 'en' ? en : fr
 
   return (
     <>
-      <MetaData language={props.locale} data={props.meta}></MetaData>
+      <MetaData language={props.locale ?? 'en'} data={props.meta} />
 
       <Header
-        language={props.locale}
+        language={props.locale || 'en'}
         t={t}
         langToggleLink={props.langToggleLink}
-      ></Header>
+      />
 
       <main>
         <div>{props.children}</div>
@@ -94,29 +115,8 @@ export default function Layout(props) {
   )
 }
 
-/**
- * Setup default props
- */
-
 Layout.defaultProps = {
   title: 'Next Template - Canada.ca',
 }
 
-Layout.propTypes = {
-  /*
-   * Locale current language
-   */
-  locale: PropTypes.string,
-  /*
-   * Meta Tags
-   */
-  meta: PropTypes.object,
-  /*
-   * Title of the page
-   */
-  title: PropTypes.string,
-  /*
-   * Link of the page in opposite language
-   */
-  langToggleLink: PropTypes.string,
-}
+export default Layout

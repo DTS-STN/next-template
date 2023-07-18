@@ -1,11 +1,29 @@
-import PropTypes from 'prop-types'
-import DateModified from '../components/DateModified'
+import React from 'react'
+import DateModified from './DateModified'
+
+interface FooterProps {
+  t: {
+    reportProblem: string
+    dateModified: string
+  }
+  footerNav1: string
+  footerNav2: string
+  footerBoxLinks: {
+    footerBoxlink: string
+    footerBoxLinkText: string
+  }[]
+  links: {
+    link: string
+    linkText: string
+  }[]
+  footerLogoAltText: string
+  footerLogoImage: string
+}
 
 /**
  * footer element for all pages
  */
-
-export default function Footer(props) {
+const Footer: React.FC<FooterProps> = (props) => {
   return (
     <footer>
       <h2 className="sr-only">siteFooter</h2>
@@ -84,42 +102,4 @@ export default function Footer(props) {
   )
 }
 
-Footer.propTypes = {
-  /**
-   * Screenreader section indicator
-   */
-  footerNav1: PropTypes.string,
-
-  /**
-   * Screenreader section indicator
-   */
-  footerNav2: PropTypes.string,
-  /**
-   * array of objects containing the link text and link
-   */
-  footerBoxLinks: PropTypes.arrayOf(
-    PropTypes.shape({
-      footerBoxlink: PropTypes.string.isRequired,
-      footerBoxLinkText: PropTypes.string.isRequired,
-    }),
-  ),
-  /**
-   * array of objects containing the link text and link
-   */
-  links: PropTypes.arrayOf(
-    PropTypes.shape({
-      link: PropTypes.string.isRequired,
-      linkText: PropTypes.string.isRequired,
-    }),
-  ),
-
-  /**
-   * alt text for footer canada-ca logo
-   */
-  footerLogoAltText: PropTypes.string.isRequired,
-
-  /**
-   * image path for footer logo
-   */
-  footerLogoImage: PropTypes.string.isRequired,
-}
+export default Footer

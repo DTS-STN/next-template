@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import React from 'react'
+import { GetStaticProps } from 'next'
 
 export default function Custom404() {
   return (
@@ -60,7 +62,7 @@ export default function Custom404() {
   )
 }
 
-export async function getStaticProps({ locale }) {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
   /* Place-holder Meta Data Props */
   const meta = {
     data_en: {

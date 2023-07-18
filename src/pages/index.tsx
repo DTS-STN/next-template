@@ -1,7 +1,28 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import MetaData from '../components/MetaData'
-export default function Index(props) {
+import React from 'react'
+import { GetStaticProps, NextPage } from 'next'
+
+interface IndexProps {
+  locale: string
+  meta: {
+    data_en: {
+      title: string
+      desc: string
+      author: string
+      keywords: string
+    }
+    data_fr: {
+      title: string
+      desc: string
+      author: string
+      keywords: string
+    }
+  }
+}
+
+export default function Index(props: IndexProps) {
   return (
     <main role="main" className="container mx-auto px-6 my-5 bg-slate-300 p-12">
       <MetaData language={props.locale} data={props.meta}></MetaData>
@@ -24,7 +45,7 @@ export default function Index(props) {
               <Link
                 href="/home"
                 className="font-display rounded focus:ring-1 focus:ring-black focus:ring-offset-2 py-2 px-10 whitespace-pre bg-[#173451] text-white text-center border border-[#173451] active:bg-[#21303F] hover:bg-#245C81 grid place-items-center"
-                ole="button"
+                role="button"
                 draggable="false"
                 lang="en"
                 id="english-button"
@@ -76,13 +97,11 @@ export default function Index(props) {
   )
 }
 
-Index.getLayout = function PageLayout(page) {
+Index.getLayout = function PageLayout(page: NextPage) {
   return <>{page}</>
 }
 
-export async function getStaticProps({ locale }) {
-  // const content = await fetchContent()
-
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
   /* Place-holder Meta Data Props */
   const meta = {
     data_en: {
