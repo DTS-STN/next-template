@@ -3,8 +3,8 @@
  */
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import Home from '../../pages/home'
-import { getStaticProps } from '../../pages/home'
+import Home from '../../src/pages/home'
+import { getStaticProps } from '../../src/pages/home'
 
 import { useRouter } from 'next/router'
 
@@ -14,7 +14,7 @@ jest.mock('next/router', () => ({
 }))
 
 //
-jest.mock('../../lib/cms', () => ({
+jest.mock('../../src/lib/cms', () => ({
   fetchContent: () => {
     return {}
   },

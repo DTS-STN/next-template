@@ -3,11 +3,11 @@
  */
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import Custom404 from '../../pages/404'
-import { getStaticProps } from '../../pages/404'
+import Custom404 from '../../src/pages/404'
+import { getStaticProps } from '../../src/pages/404'
 
 // 'Mock' call to fetchContent
-jest.mock('../../lib/cms', () => ({
+jest.mock('../../src/lib/cms', () => ({
   fetchContent: () => {
     return {}
   },

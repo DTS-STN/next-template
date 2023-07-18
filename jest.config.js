@@ -1,10 +1,6 @@
 module.exports = {
   modulePathIgnorePatterns: ['./cypress'],
-  collectCoverageFrom: [
-    'components/**/*.{js,jsx}',
-    'pages/**/*.{js,jsx}',
-    '!**/node_modules/**',
-  ],
+  collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}'],
   moduleNameMapper: {
     /* Handle CSS imports (with CSS modules)
       https://jestjs.io/docs/webpack#mocking-css-modules */

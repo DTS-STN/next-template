@@ -3,8 +3,8 @@ import Header from './Header'
 import Footer from './Footer'
 import MetaData from './MetaData'
 
-import en from '../locales/en'
-import fr from '../locales/fr'
+import en from '../../public/locales/en'
+import fr from '../../public/locales/fr'
 
 export default function Layout(props) {
   const t = props.locale === 'en' ? en : fr
@@ -25,7 +25,7 @@ export default function Layout(props) {
 
       <Footer
         footerLogoAltText="symbol2"
-        footerLogoImage="/wmms-blk.svg"
+        footerLogoImage="/assets/wmms-blk.svg"
         footerNav1="aboutGovernment"
         footerNav2="aboutThisSite"
         t={t}

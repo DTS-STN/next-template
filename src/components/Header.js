@@ -27,8 +27,8 @@ export default function Header(props) {
                 className="h-5 w-auto xs:h-6 sm:h-8 md:h-8 lg:h-7 xl:h-8 "
                 src={
                   props.language === 'en'
-                    ? '/sig-blk-en.svg'
-                    : '/sig-blk-fr.svg'
+                    ? '/assets/sig-blk-en.svg'
+                    : '/assets/sig-blk-fr.svg'
                 }
                 alt={
                   props.language === 'en'

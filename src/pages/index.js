@@ -11,7 +11,7 @@ export default function Index(props) {
 
           <div className="h-auto w-64 mx-auto pt-6 xl:w-2/3 xl:mx-0 xl:px-6">
             <Image
-              src="/sig-blk-en.svg"
+              src="/assets/sig-blk-en.svg"
               alt="Government of Canada / Gouvernement du Canada logo"
               width={10}
               height={1}
@@ -65,7 +65,11 @@ export default function Index(props) {
               Avis
             </Link>
           </div>
-          <img className="h-auto w-24 xl:w-28" src="/wmms-blk.svg" alt="" />
+          <img
+            className="h-auto w-24 xl:w-28"
+            src="/assets/wmms-blk.svg"
+            alt=""
+          />
         </div>
       </div>
     </main>

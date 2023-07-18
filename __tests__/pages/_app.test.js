@@ -3,8 +3,8 @@
  */
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import App from '../../pages/_app'
-import Index from '../../pages/index'
+import App from '../../src/pages/_app'
+import Index from '../../src/pages/index'
 
 import { useRouter } from 'next/router'
 

@@ -1,4 +1,4 @@
-import { fetchContent } from '../../lib/cms'
+import { fetchContent } from '../../src/lib/cms'
 
 describe('cms library', () => {
   beforeEach(() => {
