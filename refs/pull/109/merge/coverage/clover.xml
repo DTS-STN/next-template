@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1689709153629" clover="3.2.0">
-  <project timestamp="1689709153629" name="All files">
-    <metrics statements="54" coveredstatements="50" conditionals="45" coveredconditionals="41" methods="22" coveredmethods="20" elements="121" coveredelements="111" complexity="0" loc="54" ncloc="54" packages="4" files="14" classes="14"/>
+<coverage generated="1689709346650" clover="3.2.0">
+  <project timestamp="1689709346650" name="All files">
+    <metrics statements="54" coveredstatements="50" conditionals="47" coveredconditionals="42" methods="22" coveredmethods="20" elements="123" coveredelements="112" complexity="0" loc="54" ncloc="54" packages="4" files="14" classes="14"/>
     <package name="components">
-      <metrics statements="16" coveredstatements="16" conditionals="28" coveredconditionals="27" methods="7" coveredmethods="7"/>
+      <metrics statements="16" coveredstatements="16" conditionals="30" coveredconditionals="28" methods="7" coveredmethods="7"/>
       <file name="DateModified.tsx" path="/home/runner/work/next-template/next-template/src/components/DateModified.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="14" count="4" type="stmt"/>
@@ -23,7 +23,7 @@
         <line num="18" count="13" type="stmt"/>
       </file>
       <file name="Layout.tsx" path="/home/runner/work/next-template/next-template/src/components/Layout.tsx">
-        <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <metrics statements="4" coveredstatements="4" conditionals="6" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="30" count="2" type="stmt"/>
         <line num="31" count="9" type="cond" truecount="2" falsecount="0"/>
         <line num="33" count="8" type="stmt"/>
