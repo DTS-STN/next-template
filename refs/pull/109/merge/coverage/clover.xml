@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1689711781502" clover="3.2.0">
-  <project timestamp="1689711781502" name="All files">
-    <metrics statements="38" coveredstatements="36" conditionals="36" coveredconditionals="33" methods="19" coveredmethods="17" elements="93" coveredelements="86" complexity="0" loc="38" ncloc="38" packages="4" files="13" classes="13"/>
+<coverage generated="1689765290901" clover="3.2.0">
+  <project timestamp="1689765290902" name="All files">
+    <metrics statements="42" coveredstatements="38" conditionals="40" coveredconditionals="33" methods="20" coveredmethods="17" elements="102" coveredelements="88" complexity="0" loc="42" ncloc="42" packages="4" files="13" classes="13"/>
     <package name="components">
       <metrics statements="16" coveredstatements="16" conditionals="30" coveredconditionals="28" methods="7" coveredmethods="7"/>
       <file name="DateModified.tsx" path="/home/runner/work/next-template/next-template/src/components/DateModified.tsx">
@@ -47,7 +47,7 @@
       </file>
     </package>
     <package name="pages">
-      <metrics statements="17" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="9" coveredmethods="8"/>
+      <metrics statements="21" coveredstatements="18" conditionals="8" coveredconditionals="4" methods="10" coveredmethods="8"/>
       <file name="404.tsx" path="/home/runner/work/next-template/next-template/src/pages/404.tsx">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="6" count="1" type="stmt"/>
@@ -60,16 +60,20 @@
         <line num="7" count="1" type="stmt"/>
       </file>
       <file name="_error.tsx" path="/home/runner/work/next-template/next-template/src/pages/_error.tsx">
-        <metrics statements="1" coveredstatements="1" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-        <line num="5" count="2" type="stmt"/>
+        <metrics statements="5" coveredstatements="3" conditionals="8" coveredconditionals="4" methods="2" coveredmethods="1"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="71" count="1" type="stmt"/>
+        <line num="72" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="73" count="0" type="stmt"/>
       </file>
       <file name="home.tsx" path="/home/runner/work/next-template/next-template/src/pages/home.tsx">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
         <line num="32" count="1" type="stmt"/>
-        <line num="38" count="1" type="stmt"/>
-        <line num="53" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
       </file>
       <file name="index.tsx" path="/home/runner/work/next-template/next-template/src/pages/index.tsx">
         <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
