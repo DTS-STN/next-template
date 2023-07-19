@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1689770539402" clover="3.2.0">
+  <project timestamp="1689770539402" name="All files">
+    <metrics statements="44" coveredstatements="40" conditionals="42" coveredconditionals="34" methods="20" coveredmethods="18" elements="106" coveredelements="92" complexity="0" loc="44" ncloc="44" packages="4" files="13" classes="13"/>
+    <package name="components">
+      <metrics statements="16" coveredstatements="16" conditionals="30" coveredconditionals="28" methods="7" coveredmethods="7"/>
+      <file name="DateModified.tsx" path="/home/runner/work/next-template/next-template/src/components/DateModified.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="15" count="11" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
+      </file>
+      <file name="Footer.tsx" path="/home/runner/work/next-template/next-template/src/components/Footer.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="27" count="9" type="stmt"/>
+        <line num="44" count="66" type="stmt"/>
+        <line num="70" count="40" type="stmt"/>
+      </file>
+      <file name="Header.tsx" path="/home/runner/work/next-template/next-template/src/components/Header.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="20" coveredconditionals="20" methods="1" coveredmethods="1"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="12" type="stmt"/>
+      </file>
+      <file name="Layout.tsx" path="/home/runner/work/next-template/next-template/src/components/Layout.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="6" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="31" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="33" count="7" type="stmt"/>
+        <line num="118" count="2" type="stmt"/>
+      </file>
+      <file name="MetaData.tsx" path="/home/runner/work/next-template/next-template/src/components/MetaData.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="23" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="9" type="stmt"/>
+      </file>
+    </package>
+    <package name="lib">
+      <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+      <file name="cms.ts" path="/home/runner/work/next-template/next-template/src/lib/cms.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages">
+      <metrics statements="23" coveredstatements="20" conditionals="10" coveredconditionals="5" methods="10" coveredmethods="9"/>
+      <file name="404.tsx" path="/home/runner/work/next-template/next-template/src/pages/404.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="67" count="1" type="stmt"/>
+        <line num="82" count="1" type="stmt"/>
+      </file>
+      <file name="_app.tsx" path="/home/runner/work/next-template/next-template/src/pages/_app.tsx">
+        <metrics statements="3" coveredstatements="2" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="17" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+      </file>
+      <file name="_error.tsx" path="/home/runner/work/next-template/next-template/src/pages/_error.tsx">
+        <metrics statements="5" coveredstatements="3" conditionals="8" coveredconditionals="4" methods="2" coveredmethods="1"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="71" count="1" type="stmt"/>
+        <line num="72" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="73" count="0" type="stmt"/>
+      </file>
+      <file name="home.tsx" path="/home/runner/work/next-template/next-template/src/pages/home.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+      </file>
+      <file name="index.tsx" path="/home/runner/work/next-template/next-template/src/pages/index.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="100" count="2" type="stmt"/>
+        <line num="101" count="1" type="stmt"/>
+        <line num="104" count="2" type="stmt"/>
+        <line num="106" count="1" type="stmt"/>
+        <line num="121" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages.api">
+      <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="envAPIExample.ts" path="/home/runner/work/next-template/next-template/src/pages/api/envAPIExample.ts">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="4" count="0" type="stmt"/>
+      </file>
+      <file name="metrics.ts" path="/home/runner/work/next-template/next-template/src/pages/api/metrics.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+  </project>
+</coverage>
