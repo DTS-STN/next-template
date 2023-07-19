@@ -1,22 +1,16 @@
-import PropTypes from 'prop-types'
-import en from '../../public/locales/en'
-import fr from '../../public/locales/fr'
-import logger from '../lib/logger'
-import { useEffect } from 'react'
-
+import React from 'react'
+import { GetStaticProps } from 'next'
 import { fetchContent } from '../lib/cms'
 
-export default function Home(props) {
-  /* istanbul ignore next */
-  const t = props.locale === 'en' ? en : fr
+interface HomeProps {
+  locale: string
+  content: {
+    header: string
+    paragraph: string
+  }
+}
 
-  logger.info('Home page')
-  logger.error('test')
-  logger.warn('test')
-  useEffect(() => {
-    logger.debug('Home mounted')
-  }, [])
-
+export default function Home(props: HomeProps) {
   return (
     <div
       id="homeContent"
@@ -28,7 +22,7 @@ export default function Home(props) {
   )
 }
 
-export async function getStaticProps({ locale }) {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const content = await fetchContent()
 
   /* istanbul ignore next */
@@ -53,16 +47,4 @@ export async function getStaticProps({ locale }) {
   return {
     props: { locale, langToggleLink, content, meta },
   }
-}
-
-Home.propTypes = {
-  /**
-   * current locale in the address
-   */
-  locale: PropTypes.string,
-
-  /*
-   * Meta Tags
-   */
-  meta: PropTypes.object,
 }

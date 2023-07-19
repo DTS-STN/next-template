@@ -17,7 +17,8 @@
     "test:unit": "jest",
     "test:coverage": "jest --coverage --forceExit",
     "prepare": "husky install",
-    "husky-pre-commit": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\" && git add -A ."
+    "husky-pre-commit": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\" && git add -A .",
+    "typecheck": "tsc"
   },
   "dependencies": {
     "@opentelemetry/api": "^1.4.1",
@@ -35,6 +36,9 @@
     "@testing-library/dom": "^9.3.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
+    "@types/node": "^20.4.2",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
     "autoprefixer": "^10.4.14",
     "axe-core": "^4.7.2",
     "babel-jest": "^29.6.1",
@@ -55,6 +59,7 @@
     "prettier": "^3.0.0",
     "react-test-renderer": "^18.2.0",
     "start-server-and-test": "^2.0.0",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.1.6"
   }
 }

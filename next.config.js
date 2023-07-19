@@ -43,6 +43,7 @@ const securityHeaders = [
   },
 ]
 
+/** @type {import('next').NextConfig} */
 module.exports = {
   env: {
     NEXT_PUBLIC_BUILD_DATE: builddate,
