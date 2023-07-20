@@ -22,7 +22,7 @@ stages:
     steps:
     - task: Docker@2
       inputs:
-        containerRegistry: 'MTSContainers'
+        containerRegistry: 'wassilaACR'
         repository: 'next-template'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
