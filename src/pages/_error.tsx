@@ -24,14 +24,17 @@ const CustomError: NextPage<ErrorProps> = ({ statusCode }) => {
         <ul>
           <li>
             Return to the{' '}
-            <Link href="/">
-              <a className="text-cyan-600 underline">home page</a>
+            <Link href="/" className="text-cyan-600 underline">
+              Home page
             </Link>
             ;
           </li>
           <li>
-            <Link href="https://www.canada.ca/en/contact.html">
-              <a className="text-cyan-600 underline">Contact us</a>
+            <Link
+              href="https://www.canada.ca/en/contact.html"
+              className="text-cyan-600 underline"
+            >
+              Contact us{' '}
             </Link>
             {" and we'll help you out."}
           </li>
@@ -52,13 +55,16 @@ const CustomError: NextPage<ErrorProps> = ({ statusCode }) => {
         <ul>
           <li>
             Retournez à la{' '}
-            <Link href="/">
-              <a className="text-cyan-600 underline">page {"d'accueil;"}</a>
+            <Link href="/" className="text-cyan-600 underline">
+              Page d'accueil
             </Link>
           </li>
           <li>
-            <Link href="https://www.canada.ca/en/contact.html">
-              <a className="text-cyan-600 underline">Communiquez avec nous</a>
+            <Link
+              href="https://www.canada.ca/en/contact.html"
+              className="text-cyan-600 underline"
+            >
+              Communiquez avec nous
             </Link>
             {" pour obtenir de l'aide."}
           </li>

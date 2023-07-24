@@ -25,12 +25,15 @@
     "@opentelemetry/api": "^1.4.1",
     "@opentelemetry/auto-instrumentations-node": "^0.38.0",
     "@opentelemetry/sdk-node": "^0.41.0",
+    "i18next": "^23.2.11",
     "jest-environment-jsdom": "^29.6.1",
     "next": "^13.4.10",
+    "next-i18next": "^14.0.0",
     "prom-client": "^14.2.0",
     "prop-types": "^15.8.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-i18next": "^13.0.2"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",

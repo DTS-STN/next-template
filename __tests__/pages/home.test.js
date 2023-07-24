@@ -41,25 +41,25 @@ describe('Home page', () => {
 
   it('Test getStaticProps', async () => {
     const props = await getStaticProps({ locale: 'en' })
-
-    expect(props).toEqual({
-      props: {
-        content: {},
-        langToggleLink: '/fr/home',
-        locale: 'en',
-        meta: {
-          data_en: {
-            desc: 'English',
-            author: 'Service Canada',
-            keywords: '',
-            title: 'Next Template - Home',
-          },
-          data_fr: {
-            author: 'Service Canada',
-            desc: 'Français',
-            keywords: '',
-            title: 'Next Template - Accueil',
-          },
+    const nonI18nProps = Object.keys(props.props)
+      .filter((k) => k !== '_nextI18Next')
+      .reduce((a, k) => ({ ...a, [k]: props.props[k] }), {})
+    expect(nonI18nProps).toEqual({
+      content: {},
+      langToggleLink: '/fr/home',
+      locale: 'en',
+      meta: {
+        data_en: {
+          desc: 'English',
+          author: 'Service Canada',
+          keywords: '',
+          title: 'Next Template - Home',
+        },
+        data_fr: {
+          author: 'Service Canada',
+          desc: 'Français',
+          keywords: '',
+          title: 'Next Template - Accueil',
         },
       },
     })

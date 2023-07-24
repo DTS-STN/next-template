@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 import { AppProps } from 'next/app'
 import React, { ComponentType, ReactElement, ReactNode } from 'react'
 import { NextPage } from 'next'
+import { appWithTranslation } from 'next-i18next'
 
 type Page<P = {}> = NextPage<P> & {
   getLayout?: (page: ReactElement) => ReactNode
@@ -13,7 +14,7 @@ type Props = AppProps & {
   Component: Page
 }
 
-function MyApp({ Component, pageProps }: Props) {
+const App = ({ Component, pageProps }: Props) => {
   if (Component.getLayout) {
     return Component.getLayout(<Component {...pageProps} />)
   }
@@ -29,4 +30,4 @@ function MyApp({ Component, pageProps }: Props) {
   )
 }
 
-export default MyApp
+export default appWithTranslation(App)

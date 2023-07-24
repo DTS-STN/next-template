@@ -2,7 +2,6 @@ import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 import { axe, toHaveNoViolations } from 'jest-axe'
 import Footer from '../../src/components/Footer'
-import en from '../../public/locales/en'
 
 expect.extend(toHaveNoViolations)
 
@@ -12,7 +11,6 @@ describe('Footer', () => {
       <Footer
         footerLogoAltText="testAltText"
         footerLogoImage="testImage"
-        t={en}
         footerBoxLinks={[
           {
             footerBoxlink: 'footerContactUsURL',
@@ -52,7 +50,6 @@ describe('Footer', () => {
       <Footer
         footerLogoAltText="testAltText"
         footerLogoImage="testImage"
-        t={en}
         footerBoxLinks={[
           {
             footerBoxlink: 'footerContactUsURL',

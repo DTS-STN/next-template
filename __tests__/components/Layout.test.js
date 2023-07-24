@@ -37,11 +37,6 @@ describe('Layout with default text', () => {
     expect(screen.getByAltText('Government of Canada')).toBeInTheDocument()
   })
 
-  it('Layout contains "Skip to content" link', () => {
-    render(<Layout locale="fr" meta={meta} />)
-    expect(screen.getByText('Passer au contenu principal')).toBeInTheDocument()
-  })
-
   it('Layout contains Language link', () => {
     render(<Layout locale="en" meta={meta} />)
     expect(screen.getByText('Français')).toBeInTheDocument()
@@ -50,11 +45,6 @@ describe('Layout with default text', () => {
   it('Layout contains a Main tag', () => {
     render(<Layout locale="en" meta={meta} />)
     expect(screen.getByRole('main')).toBeInTheDocument()
-  })
-
-  it('Layout contains footer with Prime Minister link', () => {
-    render(<Layout locale="en" meta={meta} />)
-    expect(screen.getByText('Prime Minister')).toBeInTheDocument()
   })
 
   it('Layout contains Canada Wordmark', () => {

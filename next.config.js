@@ -1,3 +1,5 @@
+const { i18n } = require('./next-i18next.config')
+
 //formatting TC Date
 const builddate = process.env.BUILD_DATE
   ? process.env.BUILD_DATE.substring(0, 4) +
@@ -50,29 +52,7 @@ module.exports = {
     LOGGING_LEVEL: process.env.LOGGING_LEVEL,
   },
   reactStrictMode: true,
-  //
-  // i18n setup
-  //
-  i18n: {
-    locales: ['en', 'fr'],
-    defaultLocale: 'en',
-    localeDetection: true,
-  },
-  //
-  // rewrites setup
-  //
-  // async rewrites() {
-  //   return [
-  //     {
-  //       source: '/accueil',
-  //       destination: '/home',
-  //     },
-  //     // {
-  //     //   source: " french page name with/without route ",
-  //     //   destination: " 'english' page ",
-  //     // },
-  //   ]
-  // },
+  i18n,
   async headers() {
     return [
       {

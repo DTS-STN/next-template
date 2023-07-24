@@ -2,9 +2,7 @@ import React, { ReactNode } from 'react'
 import Header from './Header'
 import Footer from './Footer'
 import MetaData from './MetaData'
-
-import en from '../../public/locales/en'
-import fr from '../../public/locales/fr'
+import { useTranslation } from 'next-i18next'
 
 interface LayoutProps {
   children: ReactNode
@@ -28,15 +26,14 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = (props) => {
-  const t = props.locale === 'en' ? en : fr
+  const { t } = useTranslation('common')
 
   return (
     <>
       <MetaData language={props.locale ?? 'en'} data={props.meta} />
 
       <Header
-        language={props.locale || 'en'}
-        t={t}
+        language={props.locale ?? 'en'}
         langToggleLink={props.langToggleLink}
       />
 
@@ -49,65 +46,64 @@ const Layout: React.FC<LayoutProps> = (props) => {
         footerLogoImage="/assets/wmms-blk.svg"
         footerNav1="aboutGovernment"
         footerNav2="aboutThisSite"
-        t={t}
         links={[
           {
-            link: t.footerSocialMediaURL,
-            linkText: t.footerSocialMedia,
+            link: t('footerSocialMediaURL'),
+            linkText: t('footerSocialMedia'),
           },
           {
-            link: t.footerMobileAppURL,
-            linkText: t.footerMobileApp,
+            link: t('footerMobileAppURL'),
+            linkText: t('footerMobileApp'),
           },
           {
-            link: t.footerAboutURL,
-            linkText: t.footerAbout,
+            link: t('footerAboutURL'),
+            linkText: t('footerAbout'),
           },
           {
-            link: t.footerTermsAndConditionURL,
-            linkText: t.footerTermsAndCondition,
+            link: t('footerTermsAndConditionURL'),
+            linkText: t('footerTermsAndCondition'),
           },
           {
-            link: t.footerPrivacyURL,
-            linkText: t.footerPrivacy,
+            link: t('footerPrivacyURL'),
+            linkText: t('footerPrivacy'),
           },
         ]}
         footerBoxLinks={[
           {
-            footerBoxlink: t.footerContactUsURL,
-            footerBoxLinkText: t.footerContactUs,
+            footerBoxlink: t('footerContactUsURL'),
+            footerBoxLinkText: t('footerContactUs'),
           },
           {
-            footerBoxlink: t.footerNewsURL,
-            footerBoxLinkText: t.footerNews,
+            footerBoxlink: t('footerNewsURL'),
+            footerBoxLinkText: t('footerNews'),
           },
           {
-            footerBoxlink: t.footerPmURL,
-            footerBoxLinkText: t.footerPm,
+            footerBoxlink: t('footerPmURL'),
+            footerBoxLinkText: t('footerPm'),
           },
           {
-            footerBoxlink: t.footerDepartmentAgenciesURL,
-            footerBoxLinkText: t.footerDepartmentAgencies,
+            footerBoxlink: t('footerDepartmentAgenciesURL'),
+            footerBoxLinkText: t('footerDepartmentAgencies'),
           },
           {
-            footerBoxlink: t.footerTreatiesURL,
-            footerBoxLinkText: t.footerTreaties,
+            footerBoxlink: t('footerTreatiesURL'),
+            footerBoxLinkText: t('footerTreaties'),
           },
           {
-            footerBoxlink: t.footerHowGovWorksURL,
-            footerBoxLinkText: t.footerHowGovWorks,
+            footerBoxlink: t('footerHowGovWorksURL'),
+            footerBoxLinkText: t('footerHowGovWorks'),
           },
           {
-            footerBoxlink: t.footerPublicServiceURL,
-            footerBoxLinkText: t.footerPublicService,
+            footerBoxlink: t('footerPublicServiceURL'),
+            footerBoxLinkText: t('footerPublicService'),
           },
           {
-            footerBoxlink: t.footerGovReportingURL,
-            footerBoxLinkText: t.footerGovReporting,
+            footerBoxlink: t('footerGovReportingURL'),
+            footerBoxLinkText: t('footerGovReporting'),
           },
           {
-            footerBoxlink: t.footerOpenGovURL,
-            footerBoxLinkText: t.footerOpenGov,
+            footerBoxlink: t('footerOpenGovURL'),
+            footerBoxLinkText: t('footerOpenGov'),
           },
         ]}
       />
