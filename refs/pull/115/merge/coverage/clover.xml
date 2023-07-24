@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1690222875066" clover="3.2.0">
-  <project timestamp="1690222875067" name="All files">
+<coverage generated="1690222976215" clover="3.2.0">
+  <project timestamp="1690222976215" name="All files">
     <metrics statements="47" coveredstatements="22" conditionals="40" coveredconditionals="26" methods="20" coveredmethods="9" elements="107" coveredelements="57" complexity="0" loc="47" ncloc="47" packages="4" files="13" classes="13"/>
     <package name="components">
       <metrics statements="18" coveredstatements="18" conditionals="28" coveredconditionals="25" methods="7" coveredmethods="7"/>
@@ -74,11 +74,11 @@
       </file>
       <file name="home.tsx" path="/home/runner/work/next-template/next-template/src/pages/home.tsx">
         <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="16" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="49" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
       </file>
       <file name="index.tsx" path="/home/runner/work/next-template/next-template/src/pages/index.tsx">
         <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
