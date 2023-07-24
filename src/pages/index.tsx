@@ -34,11 +34,9 @@ export default function Index(props: IndexProps) {
             <Image
               src="/assets/sig-blk-en.svg"
               alt="Government of Canada / Gouvernement du Canada logo"
-              width={10}
-              height={1}
-              layout="responsive"
-              objectFit="scale-down"
-            ></Image>
+              width={200}
+              height={100}
+            />
           </div>
           <div className="flex w-max container py-11 mx-auto font-display">
             <div className="grid grid-cols-2 gap-2 xl:gap-6">
