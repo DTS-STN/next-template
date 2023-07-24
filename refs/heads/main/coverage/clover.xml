@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1690207640429" clover="3.2.0">
-  <project timestamp="1690207640429" name="All files">
+<coverage generated="1690207765720" clover="3.2.0">
+  <project timestamp="1690207765721" name="All files">
     <metrics statements="44" coveredstatements="40" conditionals="42" coveredconditionals="34" methods="20" coveredmethods="18" elements="106" coveredelements="92" complexity="0" loc="44" ncloc="44" packages="4" files="13" classes="13"/>
     <package name="components">
       <metrics statements="16" coveredstatements="16" conditionals="30" coveredconditionals="28" methods="7" coveredmethods="7"/>
@@ -80,11 +80,11 @@
       <file name="index.tsx" path="/home/runner/work/next-template/next-template/src/pages/index.tsx">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="26" count="2" type="stmt"/>
-        <line num="100" count="2" type="stmt"/>
-        <line num="101" count="1" type="stmt"/>
-        <line num="104" count="2" type="stmt"/>
-        <line num="106" count="1" type="stmt"/>
-        <line num="121" count="1" type="stmt"/>
+        <line num="98" count="2" type="stmt"/>
+        <line num="99" count="1" type="stmt"/>
+        <line num="102" count="2" type="stmt"/>
+        <line num="104" count="1" type="stmt"/>
+        <line num="119" count="1" type="stmt"/>
       </file>
     </package>
     <package name="pages.api">
