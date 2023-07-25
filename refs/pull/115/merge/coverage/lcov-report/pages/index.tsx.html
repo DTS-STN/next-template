@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -210,7 +210,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -282,13 +282,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -303,7 +303,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -311,7 +311,7 @@
 import Link from 'next/link'
 import MetaData from '../components/MetaData'
 import React from 'react'
-import { GetServerSideProps, NextPage } from 'next'
+import { GetStaticProps, NextPage } from 'next'
 &nbsp;
 interface IndexProps {
   locale: string
@@ -331,8 +331,8 @@ interface IndexProps {
   }
 }
 &nbsp;
-export default function <span class="fstat-no" title="function not covered" >Index(</span>props: IndexProps) {
-<span class="cstat-no" title="statement not covered" >  return (</span>
+export default function Index(props: IndexProps) {
+  return (
     &lt;main role="main" className="container mx-auto px-6 my-5 bg-slate-300 p-12"&gt;
       &lt;MetaData language={props.locale} data={props.meta}&gt;&lt;/MetaData&gt;
       &lt;div className="flex flex-col justify-center items-center m-auto"&gt;
@@ -404,13 +404,13 @@ export default function <span class="fstat-no" title="function not covered" >Ind
   )
 }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >Index.getLayout = function <span class="fstat-no" title="function not covered" >PageLayout(</span>page: NextPage) {</span>
-<span class="cstat-no" title="statement not covered" >  return &lt;&gt;{page}&lt;/&gt;</span>
+Index.getLayout = function PageLayout(page: NextPage) {
+  return &lt;&gt;{page}&lt;/&gt;
 }
 &nbsp;
-export const getServerSideProps: GetServerSideProps = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >as</span>ync ({ locale }) =&gt; {</span>
+export const getStaticProps: GetStaticProps = async ({ locale }) =&gt; {
   /* Place-holder Meta Data Props */
-  const meta = <span class="cstat-no" title="statement not covered" >{</span>
+  const meta = {
     data_en: {
       title: 'Next Template - Canada.ca',
       desc: 'English',
@@ -425,7 +425,7 @@ export const getServerSideProps: GetServerSideProps = <span class="cstat-no" tit
     },
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return {</span>
+  return {
     props: { locale, meta },
   }
 }
@@ -436,7 +436,7 @@ export const getServerSideProps: GetServerSideProps = <span class="cstat-no" tit
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-07-24T18:22:56.224Z
+                at 2023-07-25T15:31:56.360Z
             </div>
         <script src="../prettify.js"></script>
         <script>
