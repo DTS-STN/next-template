@@ -23,6 +23,7 @@ FROM node:17.8-alpine3.15 AS production
 ENV NODE_ENV=production
 WORKDIR /app
 COPY --from=build /build/next.config.js ./
+COPY --from=build /build/next-i18next.config.js ./next-i18next.config.js
 COPY --from=build /build/package*.json ./
 COPY --from=build /build/.next ./.next
 COPY --from=build /build/public ./public

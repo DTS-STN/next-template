@@ -1,25 +1,19 @@
 import React from 'react'
 import Link from 'next/link'
+import { useTranslation } from 'next-i18next'
 
 interface HeaderProps {
-  t: {
-    skipToMainContent: string
-    gocLink: string
-    login: string
-    serviceAndBenefits: string
-    tools: string
-    contactUs: string
-  }
   language: string
   langToggleLink?: string
 }
 
 const Header: React.FC<HeaderProps> = (props) => {
+  const { t } = useTranslation('common')
   return (
     <>
       <nav
         role="navigation"
-        aria-label={props.t.skipToMainContent}
+        aria-label={t('skipToMainContent')}
         className="absolute w-px h-px -left-96 focus-within:w-screen focus-within:h-auto focus-within:top-4 focus-within:z-50 focus-within:flex focus-within:justify-center"
       >
         <a
@@ -28,14 +22,14 @@ const Header: React.FC<HeaderProps> = (props) => {
           href="#homeContent"
           draggable={false}
         >
-          {props.t.skipToMainContent}
+          {t('skipToMainContent')}
         </a>
       </nav>
 
       <header>
         <div className="container mx-auto px-6 flex-col flex md:flex md:flex-row justify-between pt-6">
           <div className="flex flex-row justify-between items-center lg:mt-7">
-            <a href={props.t.gocLink}>
+            <a href={t('gocLink')}>
               <img
                 className="h-5 w-auto xs:h-6 sm:h-8 md:h-8 lg:h-7 xl:h-8"
                 src={
@@ -75,39 +69,10 @@ const Header: React.FC<HeaderProps> = (props) => {
             >
               {props.language === 'en' ? 'Français' : 'English'}
             </Link>
-
-            {/* Placeholder for SearchBar in case is back in ver 4??? */}
-            {/* <SearchBar /> */}
           </div>
         </div>
 
-        {/* Border */}
         <div className="mb-2 border-t pb-2 mt-4"></div>
-
-        {/* <Menu
-          loginText={props.t.login}
-          items={[
-            {
-              link: '/search',
-              text: props.t.serviceAndBenefits,
-            },
-            {
-              link: '/',
-              text: props.t.tools,
-            },
-            {
-              link: '/',
-              text: props.t.contactUs,
-            },
-          ]}
-        /> */}
-
-        {/* Place Holder for the breadcrumbs 
-
-        <div className="layout-container my-2">
-          <Breadcrumb items={breadcrumbItems} />
-        </div>
-        */}
       </header>
     </>
   )

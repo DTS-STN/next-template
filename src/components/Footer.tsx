@@ -1,11 +1,8 @@
 import React from 'react'
 import DateModified from './DateModified'
+import { useTranslation } from 'next-i18next'
 
 interface FooterProps {
-  t: {
-    reportProblem: string
-    dateModified: string
-  }
   footerNav1: string
   footerNav2: string
   footerBoxLinks: {
@@ -24,11 +21,12 @@ interface FooterProps {
  * footer element for all pages
  */
 const Footer: React.FC<FooterProps> = (props) => {
+  const { t } = useTranslation('common')
   return (
     <footer>
       <h2 className="sr-only">siteFooter</h2>
-      <div className="container mx-auto px-6 mt-5">{props.t.reportProblem}</div>
-      <DateModified text={props.t.dateModified} />
+      <div className="container mx-auto px-6 mt-5">{t('reportProblem')}</div>
+      <DateModified text={t('dateModified')} />
       <div className="w-full">
         <div className="w-full h-auto bg-footer-parliament-image bg-no-repeat bg-right-bottom bg-[#173451]">
           <div

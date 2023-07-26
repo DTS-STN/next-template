@@ -1,6 +1,7 @@
 import React from 'react'
 import { GetStaticProps } from 'next'
 import { fetchContent } from '../lib/cms'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 interface HomeProps {
   locale: string
@@ -45,6 +46,13 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   }
 
   return {
-    props: { locale, langToggleLink, content, meta },
+    // props: { locale, langToggleLink, content, meta },
+    props: {
+      ...(await serverSideTranslations(locale as string, ['common'])),
+      locale,
+      langToggleLink,
+      content,
+      meta,
+    },
   }
 }
