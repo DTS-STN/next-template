@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1690376880733" clover="3.2.0">
-  <project timestamp="1690376880733" name="All files">
-    <metrics statements="47" coveredstatements="43" conditionals="40" coveredconditionals="31" methods="20" coveredmethods="18" elements="107" coveredelements="92" complexity="0" loc="47" ncloc="47" packages="4" files="13" classes="13"/>
-    <package name="components">
+<coverage generated="1690400896510" clover="3.2.0">
+  <project timestamp="1690400896510" name="All files">
+    <metrics statements="62" coveredstatements="43" conditionals="49" coveredconditionals="31" methods="23" coveredmethods="18" elements="134" coveredelements="92" complexity="0" loc="62" ncloc="62" packages="6" files="16" classes="16"/>
+    <package name="src">
+      <metrics statements="11" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="middleware.ts" path="/home/runner/work/next-template/next-template/src/middleware.ts">
+        <metrics statements="11" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components">
       <metrics statements="18" coveredstatements="18" conditionals="28" coveredconditionals="25" methods="7" coveredmethods="7"/>
       <file name="DateModified.tsx" path="/home/runner/work/next-template/next-template/src/components/DateModified.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -38,7 +55,7 @@
         <line num="25" count="7" type="stmt"/>
       </file>
     </package>
-    <package name="lib">
+    <package name="src.lib">
       <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
       <file name="cms.ts" path="/home/runner/work/next-template/next-template/src/lib/cms.ts">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
@@ -48,7 +65,20 @@
         <line num="10" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="pages">
+    <package name="src.logging">
+      <metrics statements="4" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="log-level.ts" path="/home/runner/work/next-template/next-template/src/logging/log-level.ts">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+      </file>
+      <file name="log-util.ts" path="/home/runner/work/next-template/next-template/src/logging/log-util.ts">
+        <metrics statements="3" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="7" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="11" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages">
       <metrics statements="24" coveredstatements="21" conditionals="10" coveredconditionals="5" methods="10" coveredmethods="9"/>
       <file name="404.tsx" path="/home/runner/work/next-template/next-template/src/pages/404.tsx">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
@@ -90,7 +120,7 @@
         <line num="119" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="pages.api">
+    <package name="src.pages.api">
       <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="envAPIExample.ts" path="/home/runner/work/next-template/next-template/src/pages/api/envAPIExample.ts">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
