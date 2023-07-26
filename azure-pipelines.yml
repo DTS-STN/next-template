@@ -24,7 +24,7 @@ stages:
       displayName: Build and push an image to Azure container registry
       inputs:
         command: 'buildAndPush'
-        containerRegistry: 'Azure Container Registry - Was'
+        containerRegistry: 'Azure Container Registry - DTS'
         Dockerfile: '**/Dockerfile'
         repository: 'next-template'
         tags: 'azure-$(Build.BuildId)-dev'
