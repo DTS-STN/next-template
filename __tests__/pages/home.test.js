@@ -48,20 +48,6 @@ describe('Home page', () => {
       content: {},
       langToggleLink: '/fr/home',
       locale: 'en',
-      meta: {
-        data_en: {
-          desc: 'English',
-          author: 'Service Canada',
-          keywords: '',
-          title: 'Next Template - Home',
-        },
-        data_fr: {
-          author: 'Service Canada',
-          desc: 'Français',
-          keywords: '',
-          title: 'Next Template - Accueil',
-        },
-      },
     })
   })
 })

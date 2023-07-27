@@ -29,6 +29,7 @@
     "jest-environment-jsdom": "^29.6.1",
     "next": "^13.4.10",
     "next-i18next": "^14.0.0",
+    "next-seo": "^6.1.0",
     "pino": "^8.14.1",
     "prom-client": "^14.2.0",
     "prop-types": "^15.8.1",
