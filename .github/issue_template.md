@@ -1,7 +1,18 @@
-## [DC-XXX](https://jira-dev.bdm-dev.dts-stn.com/browse/DC-XXX) (JIRA issue, if applicable)
+## I'm submitting a ...
 
-### Description
+- [ ] bug report
+- [ ] feature request
 
-### Success Criteria
+## What is the current behavior?
 
-### Addtional Notes
+## If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem
+
+## What is the expected behavior?
+
+## What is the motivation / use case for changing the behavior?
+
+## Please tell us about your environment:
+
+Version:
+Browser:
+Language:
