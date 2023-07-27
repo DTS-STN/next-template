@@ -8,7 +8,7 @@ trigger:
 resources:
 - repo: self
 
-pool: dts-build-agent
+pool: dts-ado-build-pool
 
 variables:
   tag: '$(Build.BuildId)'
