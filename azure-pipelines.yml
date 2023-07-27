@@ -7,9 +7,6 @@ trigger:
 
 resources:
 - repo: self
-
-pool: dts-ado-build-pool
-
 variables:
   tag: '$(Build.BuildId)'
 
@@ -19,6 +16,8 @@ stages:
   jobs:
   - job: Build
     displayName: Build
+    pool:
+      vmImage: ubuntu-latest
     steps:
     - task: Docker@2
       displayName: Build and push an image to Azure container registry
