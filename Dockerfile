@@ -19,7 +19,7 @@ WORKDIR /build
 COPY --from=base /base ./
 RUN npm run build
 
-FROM node:17.8-alpine3.15 AS production
+FROM node:18-alpine3.16 AS production
 ENV NODE_ENV=production
 WORKDIR /app
 COPY --from=build /build/next.config.js ./
