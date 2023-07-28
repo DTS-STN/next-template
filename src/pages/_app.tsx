@@ -4,6 +4,7 @@ import { AppProps } from 'next/app'
 import React, { ComponentType, ReactElement, ReactNode } from 'react'
 import { NextPage } from 'next'
 import { appWithTranslation } from 'next-i18next'
+import Head from 'next/head'
 
 type Page<P = {}> = NextPage<P> & {
   getLayout?: (page: ReactElement) => ReactNode
@@ -20,13 +21,17 @@ const App = ({ Component, pageProps }: Props) => {
   }
 
   return (
-    <Layout
-      locale={pageProps.locale}
-      meta={pageProps.meta}
-      langToggleLink={pageProps.langToggleLink}
-    >
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <Layout
+        locale={pageProps.locale}
+        langToggleLink={pageProps.langToggleLink}
+      >
+        <Component {...pageProps} />
+      </Layout>
+    </>
   )
 }
 

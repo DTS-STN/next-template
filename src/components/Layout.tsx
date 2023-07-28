@@ -1,26 +1,11 @@
 import React, { ReactNode } from 'react'
 import Header from './Header'
 import Footer from './Footer'
-import MetaData from './MetaData'
 import { useTranslation } from 'next-i18next'
 
 interface LayoutProps {
   children: ReactNode
   locale?: string
-  meta: {
-    data_en: {
-      title: string
-      desc: string
-      author: string
-      keywords: string
-    }
-    data_fr: {
-      title: string
-      desc: string
-      author: string
-      keywords: string
-    }
-  }
   title?: string
   langToggleLink?: string
 }
@@ -30,8 +15,6 @@ const Layout: React.FC<LayoutProps> = (props) => {
 
   return (
     <>
-      <MetaData language={props.locale ?? 'en'} data={props.meta} />
-
       <Header
         language={props.locale ?? 'en'}
         langToggleLink={props.langToggleLink}
