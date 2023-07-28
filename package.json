@@ -32,13 +32,11 @@
     "next-seo": "^6.1.0",
     "pino": "^8.14.1",
     "prom-client": "^14.2.0",
-    "prop-types": "^15.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-i18next": "^13.0.2"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.9",
     "@testing-library/dom": "^9.3.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
