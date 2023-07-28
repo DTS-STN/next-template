@@ -1,7 +1,7 @@
 FROM node:18-alpine3.16 AS base
 WORKDIR /base
 COPY package*.json ./
-RUN npm ci
+RUN npm ci && npm cache clean --force
 COPY . .
 
 FROM base AS build
