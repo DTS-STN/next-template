@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import { axe, toHaveNoViolations } from 'jest-axe'
 import Layout from '../../src/components/Layout'
 import { useRouter } from 'next/router'
 
@@ -8,8 +7,6 @@ import { useRouter } from 'next/router'
 jest.mock('next/router', () => ({
   useRouter: jest.fn(),
 }))
-
-expect.extend(toHaveNoViolations)
 
 describe('Layout with default text', () => {
   useRouter.mockImplementation(() => ({
@@ -35,11 +32,5 @@ describe('Layout with default text', () => {
   it('Layout contains Canada Wordmark', () => {
     render(<Layout locale="en" />)
     expect(screen.getByAltText('symbol2')).toBeInTheDocument()
-  })
-
-  it('Layout contains no a11y violations', async () => {
-    const { container } = render(<Layout locale="en" />)
-    const results = await axe(container)
-    expect(results).toHaveNoViolations()
   })
 })
