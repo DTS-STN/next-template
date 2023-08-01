@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { NextPage } from 'next'
@@ -15,13 +14,11 @@ export default function Index() {
         <div className="flex flex-col justify-center items-center m-auto">
           <div className="z-10 bg-white h-auto w-[18.75rem] xl:w-[31.25rem]">
             <h1 className="sr-only">service.canada.ca-digital-center</h1>
-
-            <div className="h-auto w-64 mx-auto pt-6 xl:w-2/3 xl:mx-0 xl:px-6">
-              <Image
+            <div className="p-2">
+              <img
                 src="/assets/sig-blk-en.svg"
                 alt="Government of Canada / Gouvernement du Canada logo"
-                width={200}
-                height={100}
+                className="w-3/4"
               />
             </div>
             <div className="flex w-max container py-11 mx-auto font-display">
