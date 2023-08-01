@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1690572397377" clover="3.2.0">
-  <project timestamp="1690572397377" name="All files">
+<coverage generated="1690894550905" clover="3.2.0">
+  <project timestamp="1690894550906" name="All files">
     <metrics statements="58" coveredstatements="35" conditionals="47" coveredconditionals="29" methods="23" coveredmethods="15" elements="128" coveredelements="79" complexity="0" loc="58" ncloc="58" packages="6" files="16" classes="16"/>
     <package name="src">
       <metrics statements="11" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -24,28 +24,28 @@
       <file name="DateModified.tsx" path="/home/runner/work/next-template/next-template/src/components/DateModified.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="14" count="4" type="stmt"/>
-        <line num="15" count="9" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
         <line num="25" count="4" type="stmt"/>
       </file>
       <file name="Footer.tsx" path="/home/runner/work/next-template/next-template/src/components/Footer.tsx">
         <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
         <line num="23" count="3" type="stmt"/>
-        <line num="24" count="7" type="stmt"/>
-        <line num="25" count="7" type="stmt"/>
-        <line num="42" count="48" type="stmt"/>
-        <line num="68" count="30" type="stmt"/>
+        <line num="24" count="5" type="stmt"/>
+        <line num="25" count="5" type="stmt"/>
+        <line num="42" count="38" type="stmt"/>
+        <line num="68" count="24" type="stmt"/>
       </file>
       <file name="Header.tsx" path="/home/runner/work/next-template/next-template/src/components/Header.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="20" coveredconditionals="20" methods="1" coveredmethods="1"/>
         <line num="10" count="3" type="stmt"/>
-        <line num="11" count="10" type="stmt"/>
-        <line num="12" count="8" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
       </file>
       <file name="Layout.tsx" path="/home/runner/work/next-template/next-template/src/components/Layout.tsx">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="13" count="2" type="stmt"/>
-        <line num="14" count="6" type="stmt"/>
-        <line num="16" count="5" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
         <line num="97" count="2" type="stmt"/>
       </file>
     </package>
