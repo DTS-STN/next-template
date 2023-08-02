@@ -1,9 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1690899299846" clover="3.2.0">
-  <project timestamp="1690899299846" name="All files">
-    <metrics statements="58" coveredstatements="35" conditionals="47" coveredconditionals="29" methods="23" coveredmethods="15" elements="128" coveredelements="79" complexity="0" loc="58" ncloc="58" packages="6" files="16" classes="16"/>
+<coverage generated="1690987769944" clover="3.2.0">
+  <project timestamp="1690987769945" name="All files">
+    <metrics statements="88" coveredstatements="35" conditionals="67" coveredconditionals="29" methods="33" coveredmethods="15" elements="188" coveredelements="79" complexity="0" loc="88" ncloc="88" packages="6" files="18" classes="18"/>
     <package name="src">
-      <metrics statements="11" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="41" coveredstatements="0" conditionals="26" coveredconditionals="0" methods="11" coveredmethods="0"/>
+      <file name="instrumentation.node.ts" path="/home/runner/work/next-template/next-template/src/instrumentation.node.ts">
+        <metrics statements="28" coveredstatements="0" conditionals="18" coveredconditionals="0" methods="9" coveredmethods="0"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="62" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="63" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="83" count="0" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="90" count="0" type="stmt"/>
+        <line num="96" count="0" type="stmt"/>
+        <line num="97" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="100" count="0" type="stmt"/>
+        <line num="101" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="104" count="0" type="stmt"/>
+        <line num="105" count="0" type="stmt"/>
+        <line num="107" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="108" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="109" count="0" type="stmt"/>
+        <line num="114" count="0" type="stmt"/>
+        <line num="118" count="0" type="stmt"/>
+        <line num="125" count="0" type="stmt"/>
+        <line num="129" count="0" type="stmt"/>
+        <line num="132" count="0" type="stmt"/>
+        <line num="137" count="0" type="stmt"/>
+        <line num="139" count="0" type="stmt"/>
+        <line num="161" count="0" type="stmt"/>
+      </file>
+      <file name="instrumentation.ts" path="/home/runner/work/next-template/next-template/src/instrumentation.ts">
+        <metrics statements="2" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="2" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="3" count="0" type="stmt"/>
+      </file>
       <file name="middleware.ts" path="/home/runner/work/next-template/next-template/src/middleware.ts">
         <metrics statements="11" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="5" count="0" type="stmt"/>
