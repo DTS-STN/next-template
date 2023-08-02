@@ -39,6 +39,11 @@ module.exports = {
     NEXT_PUBLIC_BUILD_DATE: builddate,
     LOGGING_LEVEL: process.env.LOGGING_LEVEL,
   },
+  experimental: {
+    instrumentationHook: true,
+  },
+  output: 'standalone',
+  productionBrowserSourceMaps: true,
   reactStrictMode: true,
   i18n,
   async headers() {
