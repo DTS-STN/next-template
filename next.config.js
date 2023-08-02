@@ -7,7 +7,7 @@ const builddate = process.env.BUILD_DATE
     process.env.BUILD_DATE.substring(4, 6) +
     '-' +
     process.env.BUILD_DATE.substring(6, 8)
-  : 'DATE-NA'
+  : new Date().toLocaleDateString()
 
 const securityHeaders = [
   {

@@ -36,7 +36,6 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const langToggleLink = locale === 'en' ? '/fr/home' : '/home'
 
   return {
-    // props: { locale, langToggleLink, content, meta },
     props: {
       ...(await serverSideTranslations(locale as string, ['common', 'home'])),
       locale,
