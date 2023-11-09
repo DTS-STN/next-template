@@ -11,7 +11,10 @@ resources:
 pool: dts-ado-build-pool
 
 variables:
-  tag: '$(Build.BuildId)'
+  azure.servicePrincipal: 'DTS Shared Container Repo 11/09/2023'
+  azureContainerRegistry.name: 'DTS Shared Container Repo 10/11/2023'
+  azureContainerRegistry.repository: 'next-template'
+  azureContainerRegistry.tag: '$(Build.BuildId)'
 
 stages:
 - stage: BuildandPush
@@ -24,7 +27,9 @@ stages:
       displayName: Build and push an image to Azure container registry
       inputs:
         command: 'buildAndPush'
-        containerRegistry: 'Azure Container Registry - DTS'
+        containerRegistry: '$(azure.servicePrincipal)'
         Dockerfile: '**/Dockerfile'
-        repository: 'next-template'
-        tags: 'azure-$(Build.BuildId)-dev'
+        repository: '$(azureContainerRegistry.repository)'
+        tags: |
+          $(azureContainerRegistry.tag)
+          latest
