@@ -1,4 +1,4 @@
-FROM node:18.17-alpine3.18 AS base
+FROM node:20-bookworm-slim AS base
 WORKDIR /base
 COPY package*.json ./
 RUN npm ci && npm cache clean --force
@@ -21,7 +21,7 @@ WORKDIR /build
 COPY --from=base /base ./
 RUN npm run build
 
-FROM node:18.17-alpine3.18 AS production
+FROM node:20-bookworm-slim AS production
 
 # Runtime envs -- will default to build args if no env values are specified at docker run
 # ARG ENV_EXAMPLE
